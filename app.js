@@ -11,7 +11,7 @@ const publicPath = path.resolve(__dirname,'./public');
 app.use(express.static(publicPath));
 
 //corre el servidor en el puerto 3001
-app.listen('3001',()=>{
+app.listen(process.env.PORT || '3001',()=>{
     console.log('Estoy corriendo en el puerto 3001');
 });
 
