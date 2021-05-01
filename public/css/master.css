@@ -307,14 +307,6 @@ div.upload input[type="file"] {
     .main-navbar a {
         font-size: 12px;
     }
-}
-
-/*Desktop*/
-@media (min-width: 769px) {
-    main section article {
-        width: 22.5%;
-    }
-
     .main-article {
         transition: 0.4s;
     }
@@ -322,35 +314,7 @@ div.upload input[type="file"] {
     .main-article:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
-
-    .top-header {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 20px 0px 20px;
-    }
-
-    .main-navbar li {
-        margin: 0 10px;
-    }
-
-    .burger-menu {
-        display: none;
-    }
-
-    .logo {
-        width: 300px;
-    }
-
-    .footer {
-        display: flex;
-        margin-top: 20px;
-    }
-
-    .copyright {
-        padding: 20px;
-    }
-
+    
     .main-article {
         display: none;
     }
@@ -390,4 +354,40 @@ div.upload input[type="file"] {
     .product:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
+}
+
+/*Desktop*/
+@media (min-width: 769px) {
+    main section article {
+        width: 22.5%;
+    }
+
+    .top-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 0px 20px;
+    }
+
+    .main-navbar li {
+        margin: 0 10px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .footer {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .copyright {
+        padding: 20px;
+    }
+
 }
