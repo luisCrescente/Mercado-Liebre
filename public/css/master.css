@@ -241,7 +241,7 @@ div.upload input[type="file"] {
 
     .search-bar,
     .logo {
-        width: 50%;
+        width: 100px;
     }
 
     .top-header {
