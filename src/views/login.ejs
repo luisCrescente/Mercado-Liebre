@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("./partials/head") %>
+
+<body>
+    <%- include("./partials/header") %>
+<main>
+
+    <form action="/" method="GET">
+        <div class="div-login">
+
+            <input class="control-login" type="text" 
+                name="nombre-usuario" 
+                id="nombre-usuario" 
+                placeholder="Nombre de Usuario">
+        </div>
+
+        <div class="div-login">
+
+            <input class="control-login" 
+                type="password"
+                name="Contraseña" 
+                id="Contraseña"
+                placeholder="Contraseña">
+        </div>
+
+        <div class="div-button">
+            <button class="button" type='submit'>Enviar </button>
+        </div>
+
+    </form>
+   
+</main>
+ <%- include("./partials/footer") %>
+</body>
+
+</html>

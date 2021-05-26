@@ -1,0 +1,35 @@
+[
+    {
+        "name":"SmartTv Samsung 43",
+        "price":"23200 ",
+        "discount":"5 ",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum adipisci expedita obcaecati vel ab accusantium repellat, odio dolores sed provident blanditiis optio delectus consectetur, amet aliquid commodi reiciendis quos magni?",
+        "category":"in-sale",
+        "image":"img-tv-samsung-smart.jpg"
+    },
+    {
+        "name":"Samsung Galaxy S10 ",
+        "price":"70500 ",
+        "discount":" 10",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum adipisci expedita obcaecati vel ab accusantium repellat, odio dolores sed provident blanditiis optio delectus consectetur, amet aliquid commodi reiciendis quos magni?",
+        "category":"visited",
+        "image":"img-samsung-galaxy-s10.jpg"
+    },
+    {
+        "name":"McBook Pro 2019 ",
+        "price":"230000 ",
+        "discount":" 20",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum adipisci expedita obcaecati vel ab accusantium repellat, odio dolores sed provident blanditiis optio delectus consectetur, amet aliquid commodi reiciendis quos magni?",
+        "category":"in-sale",
+        "image":"img-macbook-pro-2019.jpg"
+    },
+    {
+        "name":" Cafetera Moulinex ",
+        "price":"6770 ",
+        "discount":"40 ",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum adipisci expedita obcaecati vel ab accusantium repellat, odio dolores sed provident blanditiis optio delectus consectetur, amet aliquid commodi reiciendis quos magni?",
+        "category":"visited",
+        "image":"img-cafetera-moulinex.jpg"
+    }
+    
+]
