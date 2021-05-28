@@ -1,5 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const productsController = require("../controllers/controllerProducts");
+const path = require('path');
+
+// ************ Controller Require ************
+const controllerProducts = require("../controllers/controllerProducts");
+
+/*** GET ALL PRODUCTS ***/ 
+router.get("/", controllerProducts.index); 
+
+// /*** GET ONE PRODUCT ***/ 
+// router.get('/detail/:id/', productsController.detail); 
+
 
 module.exports = router;

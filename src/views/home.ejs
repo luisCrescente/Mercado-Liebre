@@ -5,7 +5,9 @@
 
 <body>
     <%- include("./partials/header") %>
-    
+
+    <!-- ultima visita -->
+
     <section class="banner">
         <div>
             <img src="/images/img-home-banner.jpg" alt='Home banner'>
@@ -15,38 +17,54 @@
     <h3 class="tituales">Basado en tu última visita</h3>
     <main>
         <section class="main-section">
-
+            <% for (let i = 0; i < products.length; i++ ){ %>
+                <%	if(products[i].category == 'visited'){ %>
             <article class="product">
-                <img src="/images/products/" alt="">
+                <a href="/products/detail/<%= products[i].id%>"<%= products[i] %>>
+                <img src="/images/images-products/<%= products[i].image%>" alt="imagen de producto">
 
                 <div class="main-article">
                     <i class="fas fa-truck"></i>
-                    <p class="precio">$</p>
-                    <p class="descuento">% OFF</p>
-                    <p class="descripcion"></p>
+                    <p class="precio">$<%= products[i].price  %></p>
+                    <p class="descuento"><%= products[i].discount %> %OFF</p>
+                    <p class="descripcion"> <%= products[i].name  %></p>
                 </div>
+            </a>
             </article>
-
-           
+           <!-- /ultima visita -->
+           <% } %>
+           <% } %>
         </section>
-
-        <h3 class="tituales">Seccion de Ofertas</h3>
         
+           <!-- Ofertas -->
+           
+        <h3 class="tituales">Seccion de Ofertas</h3>
+
         <section class="main-section">
+
+            <% for (let i = 0; i < products.length; i++ ){ %>
+                <%	if(products[i].category == "in-sale"){ %>
             <article class="product">
-                <img src="/images/products/" alt="">
+                <a href="/products/detail/<%= products[i].id%>"<%= products[i] %>>
+                <img src="/images/images-products/<%= products[i].image%>" alt="imagen de producto">
                 <div class="main-article">
                     <i class="fas fa-truck"></i>
-                    <p class="precio">$</p>
-                    <p class="descuento"> %OFF</p>
-                    <p class="descripcion"> </p>
+                    <p class="precio">$<%= products[i].price  %></p>
+                    <p class="descuento"><%= products[i].discount %> %OFF</p>
+                    <p class="descripcion"> <%= products[i].name  %></p>
                 </div>
-            </article>
+            </a>
+        </article>
+        <% } %>
+        <% } %>
 
         </section>
     </main>
+    <!-- /Ofertas -->
 
-    <%- include("./partials/footer") %>
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
 </body>
 
 </html>

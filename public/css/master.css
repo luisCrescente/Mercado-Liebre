@@ -9,7 +9,9 @@ body {
     background-color: #ebebeb;
     font-size: 12px;
 }
-
+a {
+    text-decoration: none;
+  }
 /*CSS Home*/
 header {
     background-color: #EAC926;
@@ -314,14 +316,14 @@ div.upload input[type="file"] {
     .main-article:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
-    
+    /*
     .main-article {
         display: none;
     }
 
     .product:hover .main-article {
         display: block;
-    }
+    }*/
 
     main section article i {
         transition: transform 1s;
