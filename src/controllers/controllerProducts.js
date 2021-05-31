@@ -1,15 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
-// const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-// const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8', null, 4));
+ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8', null, 4));
 
 
 
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
-		res.render('products')
+		res.render('products', {products})
 	}
 
 	// Detail - Detail from one product
