@@ -10,15 +10,13 @@ const controller = {
 	// Root - Show all products
 	index: (req, res) => {
 		res.render('products', {products})
-	}
-
-	// Detail - Detail from one product
-	// detail: (req, res) => {
-	// 	let idProduct = req.params.id;
-	// 	let product =products.find(product => product.id == idProduct)
+	},
+	detail: (req, res) => {
+	 	let idProduct = req.params.id;
+	 	let product =products.find(product => product.id == idProduct);
 		
-	// 	res.render('detail',{product});
-	// }
+		res.render('detail',{product});
+	 }
 }
 
 

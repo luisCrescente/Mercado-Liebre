@@ -9,7 +9,7 @@ const controllerProducts = require("../controllers/controllerProducts");
 router.get("/", controllerProducts.index); 
 
 // /*** GET ONE PRODUCT ***/ 
-// router.get('/detail/:id/', productsController.detail); 
+ router.get('/detail/:id/', controllerProducts.detail); 
 
 
 module.exports = router;

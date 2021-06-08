@@ -1,5 +1,6 @@
 [
     {
+        "id":1,
         "name":"SmartTv Samsung 43",
         "price":"23200 ",
         "discount":"5 ",
@@ -8,6 +9,7 @@
         "image":"img-tv-samsung-smart.jpg"
     },
     {
+        "id":2,
         "name":"Samsung Galaxy S10 ",
         "price":"70500 ",
         "discount":" 10",
@@ -16,6 +18,7 @@
         "image":"img-samsung-galaxy-s10.jpg"
     },
     {
+        "id":3,
         "name":"McBook Pro 2019 ",
         "price":"230000 ",
         "discount":" 20",
@@ -24,6 +27,7 @@
         "image":"img-macbook-pro-2019.jpg"
     },
     {
+        "id":4,
         "name":" Cafetera Moulinex ",
         "price":"6770 ",
         "discount":"40 ",
