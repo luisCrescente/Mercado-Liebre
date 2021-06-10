@@ -69,7 +69,21 @@ const controller = {
 		
 		let product =products.find(product => product.id == idProduct)
 		res.render('detail',{product});
+	},
+	destroy:(req,res)=>{
+
+		let idProduct = req.params.id;
+		
+		let newList = products.filter(product =>{ 
+			return product.id != idProduct;
+		});
+		
+		let newListJson = JSON.stringify(newList, null, 4);
+		fs.writeFileSync(path.resolve(__dirname,'../data/productsDataBase.json'), newListJson);
+		
+		return res.redirect('/products');
 	}
+	
 }
 
 

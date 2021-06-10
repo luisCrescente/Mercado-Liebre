@@ -273,28 +273,28 @@ div.upload input[type="file"] {
 
 .actions-list {
     margin-bottom: 50px;
-  }
+}
   
-  .actions-list li {
+.actions-list li {
     display: flex;
     align-items: center;
     margin: 20px 0;
     padding: 20px 0;
-  }
+}
   
-  .actions-list i {
+.actions-list i {
     color:  #39b54a;
     font-size: 2em;
     margin-right: 15px;
-  }
+}
   
-  .actions-list p {
+.actions-list p {
     color:  #666666;
     font-size: 1.7em;
     margin: 0;
-  }
+}
   
-  .buy-button {
+.buy-button {
     background-color: #1259c3;
     font-size: 1.6em;
     color: #ffffff;
@@ -305,9 +305,9 @@ div.upload input[type="file"] {
     border-radius: 8px;
     border: none;
     margin-bottom: 15px;
-  }
+}
   
-  .action-button {
+.action-button {
     border: none;
     border-radius: 8px;
     font-size: 1.2em;
@@ -317,14 +317,14 @@ div.upload input[type="file"] {
     justify-content: center;
     padding: 15px 30px;
     margin-top: 15px;
-  }
+}
   
-  .action-button.edit {
+.action-button.edit {
     background-color: chocolate;
-  }
-  .action-button.delete {
+}
+.action-button.delete {
     background-color: rgb(248, 69, 37);
-  }
+}
 /*Version Mobile*/
 @media (max-width: 360px) {
     .main-navbar {
