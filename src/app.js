@@ -24,7 +24,9 @@ const usersRouter = require("./routers/users");
 app.use("/",mainRouter);
 app.use("/products",productsRouter);
 app.use("/users",usersRouter);
-
+app.use((req,res,next)=>{
+    res.status(404).render('errors404');
+})
 app.listen(process.env.PORT || '3001',()=>{
     console.log('Estoy corriendo en el puerto 3001');
 });//corre en el puerto 3001.

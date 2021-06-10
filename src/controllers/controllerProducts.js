@@ -20,15 +20,18 @@ const controller = {
 	index: (req, res) => {
 		res.render('products', {products})
 	},
+	// Detail - Detail from one product
 	detail: (req, res) => {
 	 	let idProduct = req.params.id;
 	 	let product =products.find(product => product.id == idProduct);
 		
 		res.render('detail',{product});
 	},
+	// Create - Form to create
 	create:(req,res) =>{
 		res.render('createProducts');
 	},
+	// Create -  Method to store
 	store:(req,res)=>{
 		let product ={
 			id: lastId,
@@ -41,11 +44,31 @@ const controller = {
 		
 		return res.redirect('/products');
 	},
+	// Update - Form to edit
 	edit:(req,res)=>{
+		let idProduct = req.params.id;
+		let productEdit = products.find(product => product.id == idProduct);
 
+		res.render('editProducts',{productEdit});
 	},
+	// Update - Method to update
 	update:(req,res) =>{
+		let idProduct = req.params.id;
 
+		products.forEach(product =>{
+			if( product.id == idProduct){
+				product.name = req.body.name;
+				product.price = req.body.price;
+				product.discount= req.body.discount;
+				product.category= req.body.category;
+				product.description= req.body.description;
+			};
+		});
+		let newListJson = JSON.stringify(products, null, 4);
+		fs.writeFileSync(path.resolve(__dirname,'../data/productsDataBase.json'), newListJson);
+		
+		let product =products.find(product => product.id == idProduct)
+		res.render('detail',{product});
 	}
 }
 
