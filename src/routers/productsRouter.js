@@ -9,7 +9,15 @@ const controllerProducts = require("../controllers/controllerProducts");
 router.get("/", controllerProducts.index); 
 
 // /*** GET ONE PRODUCT ***/ 
- router.get('/detail/:id/', controllerProducts.detail); 
+router.get('/detail/:id/', controllerProducts.detail); 
+
+/*** CREATE ONE PRODUCT ***/ 
+router.get('/create', controllerProducts.create); 
+router.post('/', /*upload.single('group-image'),*/ controllerProducts.store); 
+
+// /*** EDIT ONE PRODUCT ***/ 
+router.get('/:id/edit/', controllerProducts.edit); 
+router.put('/edit/:id', controllerProducts.update); 
 
 
 module.exports = router;

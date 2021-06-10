@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head')  %> 
+<body>
+    <%- include('partials/header')  %> 
+    <div>
+        <form action="/products/edit/<%= productoToEdit.id %>?_method=PUT" method="POST">
+
+        </form>
+    </div>
+    <%- include('partials/footer')  %> 
+</body>
+</html>

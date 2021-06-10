@@ -20,7 +20,6 @@ let mainController ={
 		
 		res.render('results',{'products':productsNew});
     }
-
     
 };
 
