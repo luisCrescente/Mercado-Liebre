@@ -16,7 +16,13 @@ a {
 header {
     background-color: #EAC926;
 }
-
+.search{
+    background: white;
+    border-radius: 5px;
+    border: 1px white solid;
+    padding: 5px 10px;
+    flex-grow: 0.4;
+}
 .main-navbar ul {
     list-style: none;
     margin: 0;
@@ -52,7 +58,19 @@ header {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
+
 }
+.main-section1 {
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
 
 main section article {
     margin: 10px;
@@ -369,13 +387,31 @@ div.upload input[type="file"] {
     main section article {
         width: 45%;
     }
-
+    .search-bar {
+        
+        flex-grow: 0.4;
+    }
+    .search {
+        display: flex;
+        flex-wrap: nowrap;
+        align-self: center;
+        justify-content: space-between;
+        background: white;
+        color: black;
+        margin: 0;
+        border-radius: 5px;
+        border: 1px white solid;
+        padding: 5px 10px;
+        width: 100%;
+        font-size: 80%;
+    }
     .top-header {
         display: flex;
+        height: 100%;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        padding: 30px 0px 30px;
+        /* padding: 30px 0px 30px; */
     }
 
     .burger-menu {
@@ -450,6 +486,17 @@ div.upload input[type="file"] {
     .product:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
+    .footer {
+        display: flex;
+        margin-top: 20px;
+        background-color: #FCFCFC;
+    }
+
+    .copyright {
+        padding: 20px;
+        text-align: center;
+        background-color: #FCFCFC;
+    }
 }
 
 /*Desktop*/
@@ -458,12 +505,12 @@ div.upload input[type="file"] {
         width: 22.5%;
     }
 
-    .top-header {
+    /* .top-header {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 20px 0px 20px;
-    }
+    } */
 
     .main-navbar li {
         margin: 0 10px;
@@ -477,13 +524,5 @@ div.upload input[type="file"] {
         width: 300px;
     }
 
-    .footer {
-        display: flex;
-        margin-top: 20px;
-    }
-
-    .copyright {
-        padding: 20px;
-    }
-
+   
 }
