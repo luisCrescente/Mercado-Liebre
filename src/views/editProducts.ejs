@@ -4,8 +4,32 @@
 <body>
     <%- include('partials/header')  %> 
     <div>
-        <form action="/products/edit/<%= productoToEdit.id %>?_method=PUT" method="POST">
+        <form action="/products/edit/<%= productoToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="botones-edit">
+                <div>
+                    <h3>Editar el producto</h3>
+                </div>  
+                <div>
+                    <div>
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name">
+                </div>
 
+                <div><label for="description"></label>
+                    <input type="text" name="description" id="description">
+                </div>
+
+                <div> <label for="price"></label>
+                    <input type="number" name="price" id="price"></div>
+
+                <div> <label for="imgP"></label>
+                    <input type="file" name="imgP" id="imgP" accept="image/.jpg, image/.png"></div>
+                </div>
+                <div>
+                <button type="reset" >Reiniciar</button>
+                <button type="submit">Guardar</button>
+            </div>
+            </div>
         </form>
     </div>
     <%- include('partials/footer')  %> 
