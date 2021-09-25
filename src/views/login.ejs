@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("./partials/head") %>
+<%- include("./partials/head") %>
 
 <body>
     <%- include("./partials/header") %>
-<main>
+    <main>
 
-    <form action="/users" method="GET">
-        <div class="div-login">
+        <form action="/users" method="GET">
+            <div class="div-login">
 
-            <input class="control-login" type="text" 
-                name="nombre-usuario" 
-                id="nombre-usuario" 
-                placeholder="Nombre de Usuario">
-        </div>
+                <input class="control-login" type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Nombre de Usuario">
+            </div>
 
-        <div class="div-login">
+            <div class="div-login">
 
-            <input class="control-login" 
-                type="password"
-                name="Contraseña" 
-                id="Contraseña"
-                placeholder="Contraseña">
-        </div>
+                <input class="control-login" type="password" name="Contraseña" id="Contraseña" placeholder="Contraseña">
+            </div>
 
-        <div class="div-button">
-            <button class="button" type='submit'>Enviar </button>
-        </div>
+            <div class="div-button">
+                <button class="button" type='submit'>Enviar </button>
+            </div>
 
-    </form>
-   
-</main>
-<!-- footer -->
-<%- include('partials/footer') %>
-<!-- /footer -->
+        </form>
+
+    </main>
+    <!-- footer -->
+    <%- include('partials/footer') %>
+    <!-- /footer -->
 </body>
 
 </html>

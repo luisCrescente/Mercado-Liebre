@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
- <%- include('partials/head')%>
+<%- include('partials/head')%>
+
 <body>
-    <%- include('partials/header')%> 
+    <%- include('partials/header')%>
 
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Detalle del producto: <%= product.name %></h2>
-			</div>
-		</div>
-        <div >
-            <div class="detail-product">
-                <div>
-                    <img src="/images/images-products/<%= product.image %>" alt="product image" class ="detail-image">
-                    <p class="detail-description"><%= product.description %></p>
-                </div>
-                <div>
-                    <article class="detail-article">
-                        <h2 class="a1"><%= product.name %></h2>
-                        <p class="a2">$<%= product.price%></p>
-                        <ul class="actions-list">
-							<li>
-								<i class="fas fa-credit-card"></i>
-								<p>Pagá en 12 cuotas sin interes</p>
-							</li>
-							<li>
-								<i class="fas fa-store"></i>
-								<p>Retiro gratis en locales del vendedor</p>
-							</li>
-						</ul>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="products-title">Detalle del producto: <%= product.name %></h2>
+        </div>
+    </div>
+    <div>
+        <div class="detail-product">
+            <div>
+                <img src="/images/images-products/<%= product.image %>" alt="product image" class="detail-image">
+                <p class="detail-description"><%= product.description %></p>
+            </div>
+            <div>
+                <article class="detail-article">
+                    <h2 class="a1"><%= product.name %></h2>
+                    <p class="a2">$<%= product.price%></p>
+                    <ul class="actions-list">
+                        <li>
+                            <i class="fas fa-credit-card"></i>
+                            <p>Pagá en 12 cuotas sin interes</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-store"></i>
+                            <p>Retiro gratis en locales del vendedor</p>
+                        </li>
+                    </ul>
 
-						<a href="#" class="buy-button">COMPRAR AHORA</a>
-						<hr>
+                    <a href="#" class="buy-button">COMPRAR AHORA</a>
+                    <hr>
 
-						<a href="/products/<%= product.id %>/edit/" class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/products/<%= product.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
-						</form>
-                    </article>
-                </div>
-
+                    <a href="/products/<%= product.id %>/edit/" class="action-button edit">EDITAR PRODUCTO</a>
+                    <form action="/products/<%= product.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
+                </article>
             </div>
 
-
         </div>
+
+
+    </div>
     <%- include('partials/footer')%>
 </body>
+
 </html>

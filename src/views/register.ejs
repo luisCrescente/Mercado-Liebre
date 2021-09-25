@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head") %>
+<%- include("./partials/head") %>
+
 <body>
     <%- include("./partials/header") %>
-    <main >
-    <form  action="/users" method="GET">
-        <div class="main-register">
-            <div class="register-box">
-                <input class="control" type="text" name="name" id="name" required placeholder="Nombre y Apellido">
-                <span>Por favor ingrese su nombre completo</span>
-            </div>
+    <main>
+        <form action="/users" method="GET">
+            <div class="main-register">
+                <div class="register-box">
+                    <input class="control" type="text" name="name" id="name" required placeholder="Nombre y Apellido">
+                    <span>Por favor ingrese su nombre completo</span>
+                </div>
 
-            <div class="register-box">
-                <input class="control" type="text" name="name-usuario" id="name-usuario" required placeholder="Nombre de Usuario">
-                <span>Ingrese un Nombre de Usuario</span>
-            </div>
+                <div class="register-box">
+                    <input class="control" type="text" name="name-usuario" id="name-usuario" required placeholder="Nombre de Usuario">
+                    <span>Ingrese un Nombre de Usuario</span>
+                </div>
 
-            <div class="register-box">
-                <input class='control' type="text" name="email" id="email"  required placeholder="Email">
-                <span>Ingrese un Mail Valido</span>
-            </div>
-            <div class="register-Fecha">
-                <label for="fecha">Fecha de Nacimiento:</label>
-                <input  type="date"  id="birthDate" value size="15">
-            </div>
-            <div class="register-box">
-                <input class="control" type="text" name="address" id="address" required placeholder="Domicilio">
-            </div>
-            <div class="register-box">
-                <label for="perfilusuario">Perfil de Usuario:</label>
-        
-                <input type="radio" name="perfil"  id="comprador"value="comprador">
-                <label for="comprador">Comprador</label>
+                <div class="register-box">
+                    <input class='control' type="text" name="email" id="email" required placeholder="Email">
+                    <span>Ingrese un Mail Valido</span>
+                </div>
+                <div class="register-Fecha">
+                    <label for="fecha">Fecha de Nacimiento:</label>
+                    <input type="date" id="birthDate" value size="15">
+                </div>
+                <div class="register-box">
+                    <input class="control" type="text" name="address" id="address" required placeholder="Domicilio">
+                </div>
+                <div class="register-box">
+                    <label for="perfilusuario">Perfil de Usuario:</label>
 
-                <input  type="radio" name="perfil" id="vendedor"value="vendedor">
-                <label for="vendedor">Vendedor</label> 
+                    <input type="radio" name="perfil" id="comprador" value="comprador">
+                    <label for="comprador">Comprador</label>
+
+                    <input type="radio" name="perfil" id="vendedor" value="vendedor">
+                    <label for="vendedor">Vendedor</label>
+                </div>
+
+                <div class="register-box">
+                    <label for="intereses">Intereses:</label>
+
+                    <input type="checkbox" name="categoria" id="intereses">
+                    <label for="intereses" name="categoria">Electro</label>
+
+                    <input type="checkbox" name="categoria" id="intereses">
+                    <label for="intereses" name="categoria">Moda</label>
+
+                    <input type="checkbox" name="categoria" id="intereses">
+                    <label for="intereses" name="categoria">Hogar</label>
+
+                    <input type="checkbox" name="categoria" id="intereses">
+                    <label for="intereses" name="categoria">Jugeteria</label>
+
+                    <input type="checkbox" name="categoria" id="intereses">
+                    <label for="intereses" name="categoria">Vida Sana</label>
+                </div>
+
+                <label class="labelfile" for="">Subir Foto de Perfil<input class="inputfile" type="file" accept=".jpg" name="file" id="file"></label>
+
+
+                <div class="register-box">
+                    <input class="control" type="password" name="password" id="password" required placeholder="Contraseña">
+                    <span>Las Contraseña deben coincidir</span>
+                </div>
+                <div class="register-box">
+                    <input class="control" type="password" name="password" id="password" required placeholder="Confirmar Contraseña">
+                    <span>Las Contraseña deben coincidir</span>
+                </div>
             </div>
-
-            <div class="register-box">
-                <label for="intereses">Intereses:</label>
-
-                <input type="checkbox" name="categoria" id="intereses">
-                <label for="intereses" name="categoria" >Electro</label>
-
-                <input  type="checkbox" name="categoria" id="intereses">
-                <label for="intereses" name="categoria" >Moda</label>
-                
-                <input type="checkbox" name="categoria" id="intereses">
-                <label for="intereses" name="categoria" >Hogar</label>
-
-                <input type="checkbox" name="categoria" id="intereses">
-                <label for="intereses" name="categoria" >Jugeteria</label>
-
-                <input type="checkbox" name="categoria" id="intereses">
-                <label for="intereses" name="categoria" >Vida Sana</label>
+            <div class="div-button">
+                <button class="button" type='submit'>Enviar </button>
+                <button class="button" type='reset'>Borrar</button>
             </div>
+        </form>
 
-            <label class="labelfile"for="">Subir Foto de Perfil<input class="inputfile" type="file" accept=".jpg" name="file" id="file"></label>
-        
-              
-            <div class="register-box">
-                <input class="control" type="password" name="password" id="password" required placeholder="Contraseña">
-                <span>Las Contraseña deben coincidir</span>
-            </div>
-            <div class="register-box">
-                <input class="control" type="password" name="password" id="password" required placeholder="Confirmar Contraseña">
-                <span>Las Contraseña deben coincidir</span>
-            </div>
-        </div>
-        <div class="div-button">
-            <button class="button" type ='submit'>Enviar </button>
-            <button class="button" type='reset'>Borrar</button>
-        </div>
-    </form>
-    
     </main>
 
     <%- include("./partials/footer") %>
 </body>
+
 </html>

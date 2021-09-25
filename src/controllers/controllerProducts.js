@@ -1,84 +1,96 @@
 const fs = require('fs');
 const path = require('path');
 
-const{readJson,writeJson,lastId} = require('./helpers');
+const {
+    readJson,
+    writeJson,
+    lastId
+} = require('./helpers');
 const productsJSON = readJson('productsDataBase.json');
 
 
 const controller = {
 
-	//  Root - Show all products
-	index: (req, res) => {
-		let products = productsJSON;
-		res.render('products', {products})
-	},
+    //  Root - Show all products
+    index: (req, res) => {
+        let products = productsJSON;
+        res.render('products', {
+            products
+        })
+    },
 
-	// Detail - Detail from one product
-		detail: (req, res) => {
-		let idProduct = req.params.id;
-		let product =productsJSON.find(product => product.id == idProduct);
-		
-		res.render('detail',{product});
-	},
+    // Detail - Detail from one product
+    detail: (req, res) => {
+        let idProduct = req.params.id;
+        let product = productsJSON.find(product => product.id == idProduct);
 
-	// Create - Form to create
-		create:(req,res) =>{
-		res.render('createProducts');
-	},
+        res.render('detail', {
+            product
+        });
+    },
 
-	// Create -  Method to store
-	store:(req,res)=>{
-	let newProduct ={
-		id: lastId(productsJSON) +1,
-		...req.body,
-		image:req.file.filename
-		}
-		productsJSON.push(newProduct);
-		writeJson('productsDataBase.json',productsJSON);
-		res.redirect('/products');
-	},
+    // Create - Form to create
+    create: (req, res) => {
+        res.render('createProducts');
+    },
 
-	// Update - Form to edit
-	edit:(req,res)=>{
-		let idProduct = req.params.id;
-		let productEdit = productsJSON.find(product => product.id == idProduct);
+    // Create -  Method to store
+    store: (req, res) => {
+        let newProduct = {
+            id: lastId(productsJSON) + 1,
+            ...req.body,
+            image: req.file.filename
+        }
+        productsJSON.push(newProduct);
+        writeJson('productsDataBase.json', productsJSON);
+        res.redirect('/products');
+    },
 
-		res.render('editProducts',{productEdit});
-		},
-		
-	// Update - Method to update
-	update:(req,res) =>{
-		let idProduct = req.params.id;
+    // Update - Form to edit
+    edit: (req, res) => {
+        let idProduct = req.params.id;
+        let productEdit = productsJSON.find(product => product.id == idProduct);
 
-		productsJSON.forEach(product =>{
-			if( product.id == idProduct){
-				product.name = req.body.name;
-				product.price = req.body.price;
-				//product.discount= req.body.discount;
-				product.category= req.body.category;
-				product.description= req.body.description;
-				product.image = req.file.filename
-			};
-		});
-		writeJson('productsDataBase.json',productsJSON)
+        res.render('editProducts', {
+            productEdit
+        });
+    },
 
-		let product =productsJSON.find(product => product.id == idProduct)
-		res.render('detail',{product});
-	},
+    // Update - Method to update
+    update: (req, res) => {
+        let idProduct = req.params.id;
 
-	// Delete Product
-	destroy:(req,res)=>{
+        productsJSON.forEach(product => {
+            if (product.id == idProduct) {
+                product.name = req.body.name;
+                product.price = req.body.price;
+                //product.discount= req.body.discount;
+                product.category = req.body.category;
+                product.description = req.body.description;
+                product.image = req.file.filename
+            };
+        });
+        writeJson('productsDataBase.json', productsJSON)
 
-		let idProduct = req.params.id;
-		
-		let newList = productsJSON.filter(product => product.id != idProduct);
-		
-	
-		writeJson('productsDataBase.json',newList);
-		
-		return res.redirect('/products');
-	}
-	
+        let product = productsJSON.find(product => product.id == idProduct)
+        res.render('detail', {
+            product
+        });
+    },
+
+    // Delete Product
+    destroy: (req, res) => {
+
+        let idProduct = req.params.id;
+
+        let newList = productsJSON.filter(product => product.id != idProduct);
+
+
+        writeJson('productsDataBase.json', newList);
+
+        return res.redirect('/products');
+    }
+
 }
 
 
